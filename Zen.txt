@@ -1,3 +1,4 @@
 Zen of Python!
+Beautiful is better than ugly.
 
 20.Beautiful is better than ugly.
