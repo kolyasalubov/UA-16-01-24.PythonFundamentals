@@ -1,3 +1,5 @@
 Zen of Python!
+
+6.Sparse is better than dense.
 12.In the face of ambiguity, refuse the temptation to guess.
 20.Beautiful is better than ugly.
