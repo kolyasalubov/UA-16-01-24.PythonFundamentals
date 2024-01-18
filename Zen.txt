@@ -1,3 +1,5 @@
 Zen of Python!
 
+10.Errors should never pass silently.
+
 20.Beautiful is better than ugly.
