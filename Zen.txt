@@ -1,4 +1,5 @@
 Zen of Python!
+1.Beautiful is better than ugly.
 
 6.Sparse is better than dense.
 
