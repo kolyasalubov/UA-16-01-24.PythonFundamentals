@@ -1,5 +1,8 @@
 Zen of Python!
 
+6.Sparse is better than dense.
+
 10.Errors should never pass silently.
+
 12.In the face of ambiguity, refuse the temptation to guess.
 20.Beautiful is better than ugly.
