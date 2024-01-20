@@ -1,0 +1,15 @@
+Zen of Python!
+1.Beautiful is better than ugly.
+
+6.Sparse is better than dense.
+9.Although practicality beats purity.
+10.Errors should never pass silently.
+
+12.In the face of ambiguity, refuse the temptation to guess.
+13.There should be one-- and preferably only one --obvious way to do it.
+15.Now is better than never.
+20.Beautiful is better than ugly.
+
+26.Readability counts.
+
+28.Although practicality beats purity.
