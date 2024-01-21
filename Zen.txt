@@ -2,6 +2,7 @@ Zen of Python!
 1.Beautiful is better than ugly.
 
 6.Sparse is better than dense.
+7.Readability counts.
 9.Although practicality beats purity.
 10.Errors should never pass silently.
 
