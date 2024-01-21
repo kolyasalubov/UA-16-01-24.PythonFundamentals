@@ -1,6 +1,8 @@
 Zen of Python!
 1.Beautiful is better than ugly.
 
+4.Complex is better than complicated.
+
 6.Sparse is better than dense.
 7.Readability counts.
 9.Although practicality beats purity.
