@@ -8,10 +8,9 @@ users_number = input('Input your four-digit natural number ')
 while not users_number.isdigit() or len(users_number) != 4:
     users_number = input('Sorry, you input wrong number. Please, input your new number ')
 
-sum_of_numbers = int(users_number[:1]) + int(users_number[1:2]) + int(users_number[2:3]) + int(users_number[3:4])
+sum_of_numbers = int(users_number[:1]) * int(users_number[1:2]) * int(users_number[2:3]) * int(users_number[3:4])
 reverse_number = users_number[::-1]
 sorted_number = ''.join(sorted(users_number))
-
 
 print(f'Your number = {users_number}')
 print(f'Sum of number = {sum_of_numbers}')
@@ -19,6 +18,7 @@ print(f'Reversed number = {reverse_number}')
 print(f'Sorted number = {sorted_number}')
 
 #I solved it this way, before realizing that we had worked without a loop
+
 # sum_of_numbers = 0 
 # reverse_number = ''
 # list_num = []
@@ -35,5 +35,3 @@ print(f'Sorted number = {sorted_number}')
 
 # reverse_number = int(reverse_number)
 # sorted_number_int = int(sorted_number) #if needed to work with int,but without 0 in number
-
-
