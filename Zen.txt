@@ -14,6 +14,7 @@ Zen of Python!
 14.Although that way may not be obvious at first unless you're Dutch.
 15.Now is better than never.
 20.Beautiful is better than ugly.
+23.Readability counts.
 25.Sparse is better than dense.
 26.Readability counts.
 
