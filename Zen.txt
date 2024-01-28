@@ -13,6 +13,7 @@ Zen of Python!
 13.There should be one-- and preferably only one --obvious way to do it.
 14.Although that way may not be obvious at first unless you're Dutch.
 15.Now is better than never.
+17.If the implementation is hard to explain, it's a bad idea.
 20.Beautiful is better than ugly.
 25.Sparse is better than dense.
 26.Readability counts.
