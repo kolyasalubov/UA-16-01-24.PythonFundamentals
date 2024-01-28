@@ -15,6 +15,7 @@ Zen of Python!
 15.Now is better than never.
 17.If the implementation is hard to explain, it's a bad idea.
 20.Beautiful is better than ugly.
+23.Readability counts.
 25.Sparse is better than dense.
 26.Readability counts.
 27.Special cases aren't special enough to break the rules.
