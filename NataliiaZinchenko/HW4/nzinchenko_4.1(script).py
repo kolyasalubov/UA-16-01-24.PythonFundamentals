@@ -17,3 +17,4 @@ elif first_number < second_number:
     print(f"{second_number} is more than {first_number}")
 elif first_number == second_number:
     print(f"Entered numbers are equal")
+    
