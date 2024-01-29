@@ -18,3 +18,4 @@ Zen of Python!
 26.Readability counts.
 
 28.Although practicality beats purity.
+30.Unless explicitly silenced.
