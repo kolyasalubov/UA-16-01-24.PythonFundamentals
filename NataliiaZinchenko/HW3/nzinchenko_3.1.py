@@ -57,19 +57,9 @@ zen_of_python = """1.Beautiful is better than ugly.
 
 
 # 1.1 Counting specific words
-words_to_count = ["better", "never", "is"]
-counter_better = 0
-counter_never = 0
-counter_is = 0
-
-
-for words_to_count[0] in zen_of_python:
-    counter_better += 1
-for words_to_count[1] in zen_of_python:
-    counter_never += 1
-for words_to_count[2] in zen_of_python:
-    counter_is += 1
-
+counter_better = zen_of_python.count("better")
+counter_never = zen_of_python.count("never")
+counter_is = zen_of_python.count("is")
 
 print(f"Word 'better' occurred {counter_better} times.")
 print(f"Word 'never' occurred {counter_never} times.")
