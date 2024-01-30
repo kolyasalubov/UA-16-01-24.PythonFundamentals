@@ -1,6 +1,6 @@
-﻿python_philosophy = """
+# Text that should be worked with
 
-The Zen of Python, by Tim Peters
+python_philosophy='''
 Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
@@ -20,25 +20,24 @@ Although never is often better than *right* now.
 If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
-"""
-# logic for the number of occurrences of words
-
-occurrences_better = python_philosophy.count('better')
-occurrences_never = python_philosophy.count('never')
-occurrences_is = python_philosophy.count('is')
-
-# display all text in uppercase
-
-uppercase_text = python_philosophy.upper()
-
-# replace symbol "i" with "&"
-
-symbol_replace = python_philosophy.replace('i', '&')
+'''
 
 
-# print(type(python_philosophy))
-print(f"occurrences of the word - 'better': {occurrences_better}")
-print(f"occurrences of the word - 'never': {occurrences_never}")
-print(f"occurrences of the word - 'is': {occurrences_is}")
-print(uppercase_text)
-print(symbol_replace)
+# First task
+count_of_better = str(python_philosophy.count('better')) # converting to str
+count_of_never = str(python_philosophy.count('never'))
+count_of_is = str(python_philosophy.count('is'))
+
+print('Number of the word "better" is: ' + count_of_better)
+print('Number of the word "better" is: '+count_of_never)
+print('Number of the word "better" is: '+count_of_is)
+
+
+# Second task
+upper_case = python_philosophy.upper()
+print(upper_case)
+
+
+# Third task
+replace = python_philosophy.replace('i','&')
+print(replace)
