@@ -9,12 +9,9 @@ help_num = factorial_num = 1
 
 while help_num <= user_num:
     if user_num == 0:
-        # print(f'Factorial of your number {user_num} equal to {factorial_num}')
         break
     else:
         factorial_num *= help_num
         help_num += 1
-# else:
-#     print(f'Factorial of your number {user_num} equal to {factorial_num}')
         
 print(f'Factorial of your number {user_num} equal to {factorial_num}')
