@@ -2,11 +2,15 @@
 
 entered_number = int(input("Enter the number at which the output of the Fibonacci number should end: "))
 
-print(0)
-print(1)
-x = 1
-while x < entered_number:
-    print(x)
-    x = x + x
+x = 0
+y = 1
+print(x)
+print(y)
+
+while y < entered_number:
+    c = x + y
+    print(c)
+    x = y
+    y = c
 else:
     print("You've reached the end")
