@@ -15,7 +15,7 @@ Zen of Python!
 15.Now is better than never.
 
 17.If the implementation is hard to explain, it's a bad idea.
-18.If the implementation is easy to explain, it may be a good idea.
+18.If the implementation is easy to explain, it may be a good idea. modified
 20.Beautiful is better than ugly.
 23.Readability counts.
 25.Sparse is better than dense.
