@@ -7,6 +7,6 @@ print(1)
 x = 1
 while x < entered_number:
     print(x)
-    x+=x
+    x = x + x
 else:
     print("You've reached the end")
