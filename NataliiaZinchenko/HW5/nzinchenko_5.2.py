@@ -7,7 +7,7 @@ current = 1
 print(previous)
 print(current)
 
-while y < entered_number:
+while current < entered_number:
     next = previous + current
     print(next)
     previous = current
