@@ -1,4 +1,4 @@
-# Writing 3 programs which calculate area of a rectangle, triangle and circle
+# Writing program which calculate area of a rectangle, triangle or circle
 
 
 def calculate_rectangle_area(length, width):
@@ -69,6 +69,12 @@ def calculate_circle_area(radius):
 def calculate_circle_area_console():
     '''Function that printing out the result of circle area calculation
     '''
+    print("Ok! Let's calculate circle area!\n")
+    custom_triangle_radius = float(input("Enter radius of the circle: \n"))
+
+
+    output_circle_area = calculate_circle_area(custom_triangle_radius)
+    print(f"Circle area is: {output_circle_area:.2f}\n")
 
 
 choosing_object = input("Which object's area you want to calculate (Rectangle, triangle or circle): \n").lower()
@@ -76,7 +82,7 @@ if choosing_object == "rectangle":
     calculate_rectangle_area_console()
 elif choosing_object == "triangle":
     calculate_triangle_area_console()
-
-#elif choosing_object == "triangle":
-#    print("Ok! Let's calculate triangle area!\n")
-#    custom
+elif choosing_object == "circle":
+    calculate_circle_area_console()
+else:
+    print("Entered data is incorrect. Try again.")
