@@ -12,7 +12,7 @@ def calculate_rectangle_area(length, width):
 
 def calculate_rectangle_area_console():
     '''Function that printing out the result of rectangle area calculation,
-       depending on the data type of rectangle length & width (int / float)
+       depending on the data type of rectangle's length & width (int / float)
     '''
     print("Ok! Let's calculate rectangle area!\n")
     custom_rectangle_length = float(input("Enter rectangle length: \n"))
@@ -29,8 +29,7 @@ def calculate_rectangle_area_console():
         print(f"Rectangle area is: {output_rectangle_area}")
 
 
-
-def calculating_triangle_area(base, height):
+def calculate_triangle_area(base, height):
     '''Function that calculates triangle area using base and width
        base: int OR float
        width: int OR float
@@ -39,7 +38,26 @@ def calculating_triangle_area(base, height):
     return triangle_area
 
 
-def calculating_circle_area(radius):
+def calculate_triangle_area_console():
+    '''Function that printing out the result of triangle area calculation,
+       depending on the data type of rectangle's base & height (int / float)
+    '''
+    print("Ok! Let's calculate triangle area!\n")
+    custom_triangle_base = float(input("Enter triangle base: \n"))
+    custom_triangle_height = float(input("Enter triangle height: \n"))
+
+    
+    output_triangle_area = calculate_triangle_area(custom_triangle_base, custom_triangle_height)
+
+    
+    if output_triangle_area - int(output_triangle_area) > 0:
+        print(f"Triangle area is: {output_triangle_area:.2f}")
+    else:
+        output_triangle_area = int(output_triangle_area)
+        print(f"Triangle area is: {output_triangle_area}")
+
+
+def calculate_circle_area(radius):
     '''Function that calculates circle area using its radius
        radius: int OR float
     '''
@@ -48,9 +66,16 @@ def calculating_circle_area(radius):
     return circle_area
 
 
+def calculate_circle_area_console():
+    '''Function that printing out the result of circle area calculation
+    '''
+
+
 choosing_object = input("Which object's area you want to calculate (Rectangle, triangle or circle): \n").lower()
 if choosing_object == "rectangle":
     calculate_rectangle_area_console()
+elif choosing_object == "triangle":
+    calculate_triangle_area_console()
 
 #elif choosing_object == "triangle":
 #    print("Ok! Let's calculate triangle area!\n")
