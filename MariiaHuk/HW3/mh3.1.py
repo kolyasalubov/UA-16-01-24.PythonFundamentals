@@ -1,12 +1,4 @@
-Koliasa Liubov: good job
-
-# You need to write Python's philosophy in the string format:
-# - find separately the number of occurrences of the words
-# - "better", "never" and "is" in the given line
-# - you need to display all text in uppercase (all letters in uppercase)
-# - replace all occurrences of the symbol “i” with “&”
-
-python_s_phl = '''Beautiful is better than ugly.
+python_philosophy = '''Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
 Complex is better than complicated.
@@ -26,12 +18,18 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!'''
 
-count_better = python_s_phl.count('better')
-count_never = python_s_phl.count('never')
-count_is = python_s_phl.count('is')
-print(f"Number of words in Python's philosophy: better = {count_better}, never = {count_never}, is = {count_is} \n")
+better_occurences = python_philosophy.count('better')
+never_occurences = python_philosophy.count('never')
+is_occurences = python_philosophy.count('is')
 
-print(python_s_phl.upper(), '\n')
+text_in_uppercase = python_philosophy.upper()
 
-replace_i = python_s_phl.replace('i', '&')
-print(replace_i)
+symbol_i_replace = python_philosophy.replace('i','&')
+
+print(f"Occurrence of the word 'better' is: {better_occurences}")
+print(f"Occurrence of the word 'never' is: {never_occurences}")
+print(f"Occurrence of the word 'is' is: {is_occurences}")
+print(text_in_uppercase)
+print(symbol_i_replace)
+
+

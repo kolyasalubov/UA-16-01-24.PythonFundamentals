@@ -1,3 +1,4 @@
+
 a=int(input("input number a ")) # 10
 b=int(input("input number b ")) #2
 a = a+b

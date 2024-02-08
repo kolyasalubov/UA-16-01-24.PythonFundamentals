@@ -1,4 +1,4 @@
-
+Koliasa Liubov: good job
 users_tempr = input('Please, enter the temperature in Celsius: ')
 
 while not users_tempr.lstrip('-').replace('.','').isdigit() :
