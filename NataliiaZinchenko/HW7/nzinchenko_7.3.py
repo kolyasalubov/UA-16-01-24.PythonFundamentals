@@ -19,4 +19,5 @@ def calculate_number_of_characters(input_string):
 
     return counting_dict
 
+
 print(calculate_number_of_characters("hello"))
