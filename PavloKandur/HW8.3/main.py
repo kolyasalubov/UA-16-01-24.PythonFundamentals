@@ -1,4 +1,4 @@
-from AreasFormula import area_of_circle, area_of_rectangle, area_of_triangle
+from areasFormula import area_of_circle, area_of_rectangle, area_of_triangle
 
 user_choice = int(input("Select which area you want to calculate\n1.triangle\n2.rectangle\n3.circle\n"))
 if user_choice == 1:

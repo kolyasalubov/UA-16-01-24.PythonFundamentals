@@ -1,3 +1,5 @@
+Koliasa Liubov: good job
+
 # You need to write Python's philosophy in the string format:
 # - find separately the number of occurrences of the words
 # - "better", "never" and "is" in the given line

@@ -1,0 +1,36 @@
+import math
+
+def rectangle_area(length, width):
+    return length *width
+
+def triangle_area(base, height):
+    return 0.5 * base* height
+
+def circle_area(radius):
+    return math.pi *radius**2
+
+def main() :
+    print("Choose a shape to calculate its area:")
+    print(" 1. Rectangle ")
+    print(" 2. Triangle ")
+    print(" 3. Circle ")
+
+    choice =int(input("Enter your choice (1/2/3): "))
+
+    if choice == 1 :
+        length, width = map(float, input("Enter length and width of the rectangle separated by space: ").split())
+        area = rectangle_area(length, width)
+    elif choice== 2:
+        base, height = map(float, input("Enter base and height of the triangle separated by space: ").split())
+        area =triangle_area(base, height)
+    elif choice == 3 :
+        radius= float(input("Enter the radius of the circle: "))
+        area =circle_area(radius)
+    else :
+        print("Invalid choice. Please choose 1, 2, or 3.")
+        return
+
+    print(f"The area is: {area:.2f}")
+
+if __name__ =="__main__":
+    main()

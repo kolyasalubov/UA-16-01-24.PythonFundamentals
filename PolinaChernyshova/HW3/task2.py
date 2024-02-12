@@ -18,6 +18,7 @@ print(f'Reversed number = {reverse_number}')
 print(f'Sorted number = {sorted_number}')
 
 #I solved it this way, before realizing that we had worked without a loop
+Koliasa Liubov: excellent work!!!
 
 # sum_of_numbers = 0 
 # reverse_number = ''
