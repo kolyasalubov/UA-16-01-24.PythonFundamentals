@@ -1,6 +1,6 @@
 number = input("Please enter four-digit natural number: ")
 
-product_of_digits = int(number[0]) * int(number[1]) * int(number[2]) * int(number[3])
+product_of_digits = [int(number[0]) * int(number[1]) * int(number[2]) * int(number[3])]
 
 reverse_order = number[3] + number[2] + number[1] + number[0]
 
