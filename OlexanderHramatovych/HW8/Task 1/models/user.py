@@ -1,2 +1,2 @@
-def create_user(user):
+def create_user():
     pass
