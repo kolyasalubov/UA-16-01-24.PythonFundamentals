@@ -25,22 +25,16 @@ def is_password_valid(input_string):
 
     if len(input_string) < 6:
         return "Entered password can't be less than 6 characters. Enter another password."
-        #quit()
     elif len(input_string) > 17:
         return "Entered password can't be more than 16 characters. Enter another password."
-        #quit()
     elif bool(re.search(pattern_09, input_string)) == False:
         return "Password should contain number 0-9. Enter another password."
-        #quit()
     elif bool(re.search(pattern_az, input_string)) == False:
         return "Password should contain characters between a-z. Enter another password"
-        #quit()
     elif bool(re.search(pattern_AZ, input_string)) == False:
         return "Password should contain characters between A-Z. Enter another password"
-        #quit()
     elif bool(re.search(pattern_special_chars, input_string)) == False:
         return "Password should contain special characters $#@. Enter another password"
-        #quit()
     else:
         return "Password is valid."
 
