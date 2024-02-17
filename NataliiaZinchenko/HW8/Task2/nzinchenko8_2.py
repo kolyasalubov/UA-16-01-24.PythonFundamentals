@@ -24,26 +24,30 @@ def is_password_valid(input_string):
 
 
     if len(input_string) < 6:
-        print("Entered password can't be less than 6 characters. Enter another password.")
-        quit()
+        return "Entered password can't be less than 6 characters. Enter another password."
+        #quit()
     elif len(input_string) > 17:
-        print("Entered password can't be more than 16 characters. Enter another password.")
-        quit()
+        return "Entered password can't be more than 16 characters. Enter another password."
+        #quit()
     elif bool(re.search(pattern_09, input_string)) == False:
-        print("Password should contain number 0-9. Enter another password.")
-        quit()
+        return "Password should contain number 0-9. Enter another password."
+        #quit()
     elif bool(re.search(pattern_az, input_string)) == False:
-        print("Password should contain characters between a-z. Enter another password")
-        quit()
+        return "Password should contain characters between a-z. Enter another password"
+        #quit()
     elif bool(re.search(pattern_AZ, input_string)) == False:
-        print("Password should contain characters between A-Z. Enter another password")
-        quit()
+        return "Password should contain characters between A-Z. Enter another password"
+        #quit()
     elif bool(re.search(pattern_special_chars, input_string)) == False:
-        print("Password should contain special characters $#@. Enter another password")
-        quit()
+        return "Password should contain special characters $#@. Enter another password"
+        #quit()
     else:
         return "Password is valid."
 
 
-entered_password = input("Enter your password: \n")
-print(is_password_valid(entered_password))
+while True:
+    entered_password = input("Enter your password: \n")
+    response = is_password_valid(entered_password)
+    print(response)
+    if response == "Password is valid.":
+        break
