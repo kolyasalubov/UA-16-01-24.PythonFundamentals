@@ -19,7 +19,7 @@ pygame.init()
 
 gameDisplay = pygame.display.set_mode((WIDTH_DISPLAY, HEIGHT_DISPLAY), pygame.RESIZABLE)
 
-pygame.display.set_caption("My first game")
+pygame.display.set_caption("Nataliia's game")
 
 
 run = True
@@ -34,11 +34,11 @@ while run:
 
     keys = pygame.key.get_pressed()
     
-    if keys[pygame.K_LEFT]:
+    if keys[pygame.K_LEFT] and COORD_X > DELTA_STEP:
         COORD_X = COORD_X-DELTA_STEP
     if keys[pygame.K_RIGHT]:
         COORD_X = COORD_X+DELTA_STEP
-    if keys[pygame.K_UP]:
+    if keys[pygame.K_UP] and COORD_Y > DELTA_STEP:
         COORD_Y = COORD_Y-DELTA_STEP
     if keys[pygame.K_DOWN]:
         COORD_Y = COORD_Y+DELTA_STEP
