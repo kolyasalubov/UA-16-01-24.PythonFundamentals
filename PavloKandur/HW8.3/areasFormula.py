@@ -1,5 +1,4 @@
-from math import pow, pi
-
+from math import pi, pow
 def area_of_triangle(side :float,height:float) ->float:
     """
     Name: area_of_triangle
@@ -8,7 +7,7 @@ def area_of_triangle(side :float,height:float) ->float:
     type height: float
     function return float object
     """
-    return pow(side*height,0.5)
+    return pow(side*height,2)
 
 def area_of_rectangle(side1:float,side2:float)->float:
     """
