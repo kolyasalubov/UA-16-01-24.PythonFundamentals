@@ -5,7 +5,7 @@ def guess_the_number(num):
     '''Function that generates random number and gives user 10 attempts to guess it.
        Function returns string with quantity attempts left or with congratulation message
 
-       type num: int    
+       type num: str    
     '''
     num = int(num)
     random_number = randint(1,100)
@@ -34,5 +34,4 @@ def guess_the_number(num):
 
 
 user_guesses_number = input("Guess the random number from 1 to 100 and enter it here: \n")
-
 guess_the_number(user_guesses_number)
