@@ -24,23 +24,23 @@ def get_weather(city):
     observation = mgr.weather_at_place(city)
     w = observation.weather
 
-    info_about = {}
+    info_about = {
+        'Status:': w.detailed_status,
+        'Wind:': w.wind(),
+        'Humidity:': w.humidity,
+        'Temperature:': w.temperature('celsius'),
+        'Rain:': w.rain,
+        # 'heat_index': w.heat_index,
+        'Clouds:': w.clouds
+    }
 
-    info_about['Status:'] = w.detailed_status
-    info_about['Wind:'] = w.wind()
-    info_about['Humidity:'] = w.humidity
-    info_about['Temperature:'] = w.temperature('celsius')
-    info_about['Rain:'] = w.rain
-#   info_about['heat_index'] = w.heat_index
-    info_about['Clouds:'] = w.clouds
     rely_line = 0
 
-    for item in info_about.keys():
-        info_line = str(item) + ' ' + str(info_about.get(item))
+    for item, value in info_about.items():
+        info_line = f"{item} {value}"
         line = tk.Label(lower_frame, text=info_line, font=('Courier', 14))
         line.place(relx=0, rely=rely_line)
         rely_line += 0.150
-
 
 
 frame = tk.Frame(root, bg="deep sky blue", bd=5)
