@@ -1,0 +1,17 @@
+import random2 as rand
+sys_number = rand.randint(1,100)
+count = 0
+
+while count <= 10:
+    user_number = int(input("Enter the number: "))
+    if user_number > sys_number:
+        count += 1
+        print("The number is less.Try again!")
+    elif user_number < sys_number:
+        count += 1
+        print("The number is bigger. Try again!")
+    elif user_number == sys_number:
+        print("You win!")
+        break
+else:
+    print("You lost!")
