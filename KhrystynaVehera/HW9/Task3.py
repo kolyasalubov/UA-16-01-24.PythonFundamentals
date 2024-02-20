@@ -1,6 +1,5 @@
 from pyowm import OWM
 import tkinter as tk
-# from tkinter import font
 
 HEIGHT = 350
 WIDTH = 450
