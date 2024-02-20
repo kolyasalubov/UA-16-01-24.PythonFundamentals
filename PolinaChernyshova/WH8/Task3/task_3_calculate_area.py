@@ -15,6 +15,7 @@ def calculate_area_triangle(side_a: float, height: float )->float:
     return 0.5 * side_a * height
 
 def calculate_area_circle(radius: float)->float:
+    
     '''
     The function takes to float type argument: radius
     Return the area of a circle in float type 
