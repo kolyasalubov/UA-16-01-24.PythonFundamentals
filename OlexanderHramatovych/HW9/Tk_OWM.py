@@ -1,6 +1,8 @@
 import tkinter as tk
 from pyowm import OWM
-from pygame import mixer
+import pygame
+
+
 
 API_KEY = 'ef2206ff5da67de63306d0b143e20872'
 owm = OWM(API_KEY)
@@ -17,8 +19,11 @@ canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 root.title("Weather Application")
 canvas.pack()
 
-mixer.init()
-
+mudic_file = "OlexanderHramatovych/HW9/music.mp3"
+pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load(mudic_file)
+pygame.mixer.music.play()
 
 def get_weather(city):
     observation = mgr.weather_at_place(city)
@@ -61,6 +66,5 @@ lower_frame = tk.Frame(root, bg='green', bd=5)
 lower_frame.place(relx=0.5, rely=0.25, relwidth=0.9, relheight=0.7, anchor='n')
 label = tk.Label(lower_frame, font=('Courier', 18))
 label.place(relx=0, rely=0, relwidth=1, relheight=1)
-
 
 root.mainloop()
