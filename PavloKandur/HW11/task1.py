@@ -12,5 +12,3 @@ try:
     print(age_check(user_input))
 except Exception:
     print("Wrong input")
-except ValueError:
-    print("Wrong format of age")
