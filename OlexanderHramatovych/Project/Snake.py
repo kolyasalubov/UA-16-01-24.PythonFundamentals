@@ -14,6 +14,7 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 AQUA = (0, 255, 255)
+YELLOW = (255,255,0)
 
 # snake and food size
 BLOCK_SIZE = 20
@@ -27,10 +28,14 @@ pygame.display.set_caption('Snake Game')
 
 clock = pygame.time.Clock()
 
+def game_score(score):
+    score_style = pygame.font.SysFont("Castelar Regualar",30)
+    sc = score_style.render("Your score: "+str(score),True,RED)
+    screen.blit(sc,[20,20])
 # message on display
 def message(msg, color):
-    font = pygame.font.SysFont("Arial", 30)
-    text = font.render(msg, True, color)
+    font_style = pygame.font.SysFont("Arial", 30)
+    text = font_style.render(msg, True, color)
     screen.blit(text, [SCREEN_WIDTH / 6, SCREEN_HEIGHT / 3])
 
 # main function
@@ -58,6 +63,7 @@ def gameLoop():
         while game_close:
             screen.fill(WHITE)
             message("You Lost! Press Q to quit or C to Play Again", RED)
+            game_score(snake_length - 1)
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -106,8 +112,8 @@ def gameLoop():
             food_y = round(random.randrange(0, SCREEN_HEIGHT - BLOCK_SIZE) / BLOCK_SIZE) * BLOCK_SIZE
             snake_length += 1
 
-        screen.fill(WHITE)
-        pygame.draw.rect(screen, GREEN, [food_x, food_y, BLOCK_SIZE, BLOCK_SIZE])
+        screen.fill(GREEN)
+        pygame.draw.rect(screen, RED, [food_x, food_y, BLOCK_SIZE, BLOCK_SIZE])
 
         snake_head = []
         snake_head.append(x)
@@ -122,15 +128,12 @@ def gameLoop():
         for segment in snake_list[:-1]:
             if segment == snake_head:
                 game_close = True
-
+        game_score(snake_length - 1)
         # Drawing the snake
         for segment in snake_list:
-            pygame.draw.rect(screen, BLUE, [segment[0], segment[1], BLOCK_SIZE, BLOCK_SIZE])
+            pygame.draw.rect(screen,BLUE, [segment[0], segment[1], BLOCK_SIZE, BLOCK_SIZE])
 
         pygame.display.update()
         clock.tick(SPEED)
-
-    pygame.quit()
-    quit()
 
 gameLoop()
