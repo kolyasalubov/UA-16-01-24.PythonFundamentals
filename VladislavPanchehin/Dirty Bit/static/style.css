@@ -11,92 +11,68 @@ div {
 /* Styles for input fields */
 input {
     border-radius: 4px;
-    /* Round corners */
     padding: 10px 16px;
-    /* Margins top and bottom 10px, left and right 16px */
-    /* increase the padding for the input field */
-    font-size: 18px;
-    /* Font size */
-    /* increase font size */
+    font-size: 24px;
     border: 1px solid #ccc;
-    /* Border with shadow */
     transition: border-color 0.3s;
-    /* Smooth change of border color when focusing */
     font-weight: bold;
-    /* Bold font style */
+    word-wrap: break-word;
+    /* Добавляем перенос текста */
 }
 
-/* Styles for the input field when focusing */
 input:focus {
     outline: none;
-    /* Remove the outline when focusing */
     border-color: #4CAF50;
-    /* Border color when focusing */
 }
 
 /* Styles for the first block */
 #first {
     margin-top: 50px;
-    /* Top padding */
-    background-color: #e0f2f1;
-    /* Background color */
+    background-color: rgba(224, 242, 241, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Styles for buttons */
 .button1 {
-    width: 115px;
-    /* Button width */
+    width: 150px;
     height: 30px;
-    /* Button height */
-    /* Background color */
     background: #4CAF50;
     border: none;
-    /* Remove the border */
     text-align: center;
-    /* Align text to center */
     border-radius: 5px;
-    /* Round corners */
     font-weight: bold;
-    /* Bold font style */
     font-size: 18px;
-    /* Font size */
-    /* increase font size */
     color: white;
-    /* Text color */
     cursor: pointer;
-    /* Change the mouse pointer when hovering */
     transition: background-color 0.3s;
-    /* Smooth background color change on hover */
 }
 
 .button1:hover {
     background-color: #45a049;
-    /* Background color on hover */
+}
+
+.button2,
+.button3 {
+    width: 150px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
 }
 
 .button2 {
-    width: 115px;
-    height: 30px;
     background: #0066ff;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    line-height: 30px;
-    /* increase the text height in the button */
 }
 
 .button3 {
-    width: 115px;
-    height: 30px;
     background: red;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 30px;
 }
 
 .label {
@@ -104,14 +80,12 @@ input:focus {
     padding: 8px;
     font-family: Arial;
     font-weight: bold;
-    font-size: 18px;
-    /* increase font size */
+    font-size: 24px;
 }
 
 .thick {
     font-weight: bold;
-    font-size: 24px;
-    /* increase font size */
+    font-size: 36px;
 }
 
 .done {
@@ -133,68 +107,39 @@ td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    font-size: 24px;
 }
 
 th {
     background-color: #f2f2f2;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: bold;
     color: #333;
-    /* Text color */
 }
 
 td {
-    font-size: 16px;
+    font-size: 24px;
     color: #555;
-    /* Text color */
 }
-
 
 h1 {
     color: #cc0000;
     font-weight: bold;
-    font-size: 28px;
-    /* increase font size */
+    font-size: 48px;
 }
 
 h2 {
-    font-size: 25px;
-    /* Set font size */
+    font-size: 40px;
     font-weight: bold;
-    /* Bold font */
     color: #006600;
-    /* Text color */
     margin-bottom: 10px;
-    /* Bottom padding */
 }
 
 p {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     font-family: Arial, sans-serif;
     color: #333;
-    /* Text color */
-}
-
-div {
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    /* Font size */
-    font-weight: bold;
-    /* Bold */
-    color: #333;
-    /* Text color */
-    padding: 10px;
-    /* Indentation around text */
-}
-
-/* full screen video */
-
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
 }
 
 #video-background {
@@ -204,15 +149,13 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Stretch the video to fill the entire screen */
     z-index: -1;
 }
 
-/* Centering the container */
-#first {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+div {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
 }
