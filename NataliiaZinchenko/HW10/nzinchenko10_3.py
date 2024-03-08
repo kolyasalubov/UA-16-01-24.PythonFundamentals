@@ -17,7 +17,7 @@ class Employee:
         elif self.__salary < 0:
             raise ValueError("Salary can't be less than 0")
         
-        if self.__position == False:
+        if type(self.__position) != str or self.__position == None or len(self.__position) == 0:
             raise ValueError("Position can't be empty")
 
     def __del__(self):
@@ -34,13 +34,14 @@ class Employee:
         return f"Employee name: {self._name}, salary: {self._Employee__salary}, position: {self._Employee__position}"
     
 
+# Testing block
 employee_1 = Employee("Edward Smith", 2000, "Accountant")
 employee_2 = Employee("Peter Parker", 1000, "Spider man")
 employee_3 = Employee("Amanda Seftor", 5464, "Singer")
 employee_4 = Employee("Ben Reilly", 3566, "Super hero")
 print("==== Employees number before deletion ====")
 # employee_5 = Employee("Charlie Campion", 0, "Accountant")     # broken data employee to check Exception raising with 0 salary
-# employee_6 = Employee("Dakota North", 1000, 0)                # broken data employee to check Exception raising with empty position
+# employee_6 = Employee("Dakota North", 1000, "")                # broken data employee to check Exception raising with empty position
 # employee_7 = Employee("Dexter Bennett", -10, "Scientist")     # broken data employee to check Exception raising with salary < 0 
 print(Employee.calculate_employee_number())
 del employee_3
@@ -53,6 +54,12 @@ print(employee_4.employee_info())
 print("======= All employees deletion ========")
 del employee_1, employee_2, employee_4
 print(Employee.calculate_employee_number())
+print("====== Class info ======")
+print(f"""__base__: {Employee.__base__};
+      __dict__: {Employee.__dict__};
+      __name__: {Employee.__name__};
+      __module__: {Employee.__module__};
+      __doc__: {Employee.__doc__}""")
 
 
 
