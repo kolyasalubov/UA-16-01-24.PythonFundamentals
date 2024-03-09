@@ -2,7 +2,7 @@ def God():
     man = Man()
     woman = Woman()
     people = [man, woman]
-    return array
+    return people
 
 class Human ():
     pass
