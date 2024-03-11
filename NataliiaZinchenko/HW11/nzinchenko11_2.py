@@ -27,4 +27,13 @@ def number_to_day(num):
     elif num == 7:
         return "Sunday"
     
-
+    
+try:
+    ask_number = int(input("Enter number from 1 to 7:\n"))
+    if ask_number < 1:
+        raise CustomError(f"You entered {ask_number}: Number can't be less than 1")
+    elif ask_number > 7:
+        raise CustomError(f"You entered {ask_number}: Number can't be more than 7")
+    print(number_to_day(ask_number))
+except (CustomError, ValueError) as e:
+    print(f"Exception: {e}")
