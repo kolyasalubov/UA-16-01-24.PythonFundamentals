@@ -1,0 +1,107 @@
+﻿﻿<!DOCTYPE html>
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <!-- Title of the webpage -->
+    <title> Welcome to the Task Master. Dirty Bit</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+     <!-- Videophone -->
+     <video autoplay muted loop id="video-background">
+        <!-- Path to the video file in the static folder -->
+        <source src="{{ url_for('static', filename='video_file.mp4') }}" type="video/mp4">
+        <!-- Fallback text if browser doesn't support video -->
+        Your browser does not support the video tag.
+    </video>
+
+     <!-- Music -->
+     <audio autoplay loop>
+        <!-- Path to the audio file in the static folder -->
+        <source src="{{ url_for('static', filename='audio_file.mp3') }}" type="audio/mpeg">
+        <!-- Fallback text if browser doesn't support audio -->
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Main container -->
+<div id="first" >
+        <h1>Make a challenge! Enter a task and complete it!</h1>
+        <!-- Form for adding a task -->
+        <form  action="/add" method="post">
+            <div style="margin-top: 30px;"> <!-- Add padding at the top -->
+                 <!-- Label for the input field -->
+                <label class="thick">Enter the task</label>
+                  <!-- Input field for entering task -->
+                <input type="text" name="name">
+                <!-- Button to submit the form -->
+            <button class="button1" type="submit" >Add a task</button>
+            </div>
+        </form>
+        <br><br>
+      <!-- Displaying statistics -->
+        <div>
+            <h2>Statistics</h2>  <!-- Subheading for statistics -->
+            <p>Total tasks: {{ total_tasks }}</p> <!-- Displaying total number of tasks -->
+            <p>Completed tasks: {{ completed_tasks }}</p>  <!-- Displaying number of completed tasks -->
+            <p>Success rate: {{ success_rate }}%</p> <!-- Displaying success rate -->
+            <div style="color:{{ message_color }}"> <!-- Displaying a message with image and color -->
+                
+                <div>
+                    <!-- Image -->
+                    <img src="{{ message_image }}" alt="{{ message }}" style="max-width: 100px; max-height: 100px;"><br>
+                    <!-- Text message -->
+                    <span style="color:{{ message_color }}">{{ message }}</span>
+                </div>
+                
+                    
+                
+            </div>
+            
+        </div>
+        <!-- End of statistics block -->
+
+     <!-- Table for task management -->
+
+     <table>
+         <tbody>
+            <!-- Subheading for task management -->
+            <h2>Task management</h2>
+            <!-- Table headers -->
+            <thead>
+                <tr>
+                    <th>Task Number</th>
+                    <th>Task Name</th>
+                    <th>Status Task</th>
+                    <th>Change of status</th>
+                    <th>Delete task</th>
+                </tr>
+            </thead>
+        </tbody>
+        <!-- Loop to display list of tasks -->
+        {% for todo in todo_list %}
+        <tr>
+             <!-- Task number -->
+             <td class="thick">{{todo.task_id }}</td>
+             <!-- Task name -->
+             <td class="thick">{{ todo.name }}</td>
+             <!-- Task status -->
+             {% if todo.done == False %}
+             <!-- Label for pending task -->
+             <td style="max-width: 150px; white-space: nowrap;"><label class="label pending">Task not done</label></td>
+             {% else %}
+             <!-- Label for completed task -->
+             <td style="max-width: 150px; white-space: nowrap;"><label class="label done">Task done</label></td>
+             {% endif %}
+              <!-- Link to update task status -->
+             <td style="max-width: 150px; white-space: nowrap;"><a  href="/update/{{ todo.task_id }}" class="button2">Mark as completed</a></td>
+             <!-- Link to delete task -->
+             <td style="max-width: 150px; white-space: nowrap;"><a  href="/delete/{{ todo.task_id }}" class="button3">Delete task</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</body>
+</html>
